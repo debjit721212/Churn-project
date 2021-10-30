@@ -1,0 +1,200 @@
+<html>
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+	<title>Churn Prediction</title>
+	<div class="container">
+		<div class="row">
+
+			<div class="container-fluid pl-">
+				<h1 class="text-warning">My First Project Page</h1>
+				<p class="text-muted">Thank you for visitng. This is a churn prediction model.</p>
+				<p class="text-muted">Here you should give the values and the model will predict does the customer will stay or leave with
+					confidence.</p>
+			</div>
+		</div>
+
+
+		<form action="http://127.0.0.1:5000/" method="POST">
+			<div class="col-sm-13">
+				<div class="form-group  purple-border">
+
+					<label for="query1" class="text-info font-weight-bold">Are you a SeniorCitizen:</label>
+					<select id="query1" name="query1">
+						<option value="1">Yes</option>
+						<option value="0">No</option>
+					</select>
+					<!--textarea class="form-control" rows="2" id="query1" name="query1"  cols="15" autofocus>{{query1}}</textarea -->
+				</div>
+
+				<div class="form-group  purple-border">
+					<label for="query2" class="text-info font-weight-bold">Put Your tenure in Months:</label>
+					<textarea class="form-control" rows="2" id="query2" name="query2" rows="2" cols="5"
+						autofocus>{{query2}}</textarea>
+				</div>
+
+				<div class="form-group  purple-border">
+					<label for="query3" class="text-info font-weight-bold">Your MonthlyCharges in $ :</label>
+					<textarea class="form-control" rows="2" id="query3" name="query3" rows="2" cols="5"
+						autofocus>{{query3}}</textarea>
+				</div>
+				<div class="form-group  purple-border">
+					<label for="query4" class="text-info font-weight-bold">Your TotalCharges in $:</label>
+					<textarea class="form-control" rows="2" id="query4" name="query4" rows="2" cols="5" autofocus>{{query4}}</textarea>
+				</div>
+				<div class="form-group  purple-border">
+					<label for="query5" class="text-info font-weight-bold"> Choose your gender :</label>
+					<select id="query5" name="query5">
+						<option value="Male">Male</option>
+						<option value="Female">Female</option>
+					</select>
+					<!-- <textarea class="form-control" rows="2"  rows="2" cols="5" autofocus>{{query5}}</textarea> -->
+				</div>
+				<div class="form-group  purple-border">
+					<label for="query6" class="text-info font-weight-bold"> Do you have Partner:</label>
+					<select id="query6" name="query6">
+						<option value="Yes">Yes</option>
+						<option value="No">No</option>
+					</select>
+					<!--textarea class="form-control" rows="2" id="query6" name="query6" rows="2" cols="5" autofocus>{{query6}}</textarea-->
+				</div>
+				<div class="form-group  purple-border">
+					<label for="query7" class="text-info font-weight-bold"> Are you Dependent:</label>
+					<select id="query7" name="query7">
+						<option value="No">No, I'm Independent</option>
+						<option value="Yes">Yes, I'm Dependent</option>
+					</select>
+
+					<!--textarea class="form-control" rows="2" id="query7" name="query7" rows="2" cols="5" autofocus>{{query7}}</textarea-->
+				</div>
+				<div class="form-group  purple-border">
+					<label for="query8" class="text-info font-weight-bold">Do you use PhoneService:</label>
+					<select id="query8" name="query8">
+						<option value="Yes">Yes </option>
+						<option value="No">No</option>
+					</select>
+					<!--textarea class="form-control" rows="2" id="query8" name="query8" rows="2" cols="5" autofocus>{{query8}}</textarea-->
+				</div>
+				<div class="form-group  purple-border">
+					<label for="query9" class="text-info font-weight-bold">Are you using MultipleLines:</label>
+					<select id="query9" name="query9">
+						<option value="No phone service">No phone service</option>
+						<option value="Yes">Yes</option>
+						<option value="No">No</option>
+					</select>
+					<!--textarea class="form-control" rows="2" id="query9" name="query9" rows="2" cols="5" autofocus>{{query9}}</textarea-->
+				</div>
+				<div class="form-group  purple-border">
+					<label for="query10" class="text-info font-weight-bold"> Are you using InternetService:</label>
+					<select id="query10" name="query10">
+						<option value="DSL">DSL</option>
+						<option value="Fiber optic">Fiber optic</option>
+						<option value="No">No</option>
+					</select>
+					<!--textarea class="form-control" rows="2" id="query10" name="query10" rows="2" cols="5" autofocus>{{query10}}</textarea-->
+				</div>
+				<div class="form-group  purple-border">
+					<label for="query11" class="text-info font-weight-bold">OnlineSecurity :</label>
+					<select id="query11" name="query11">
+						<option value="No">No</option>
+						<option value="Yes">Yes</option>
+						<option value="No internet service">No internet service</option>
+					</select>
+					<!--textarea class="form-control" rows="2" id="query11" name="query11" rows="2" cols="5" autofocus>{{query11}}</textarea-->
+				</div>
+				<div class="form-group  purple-border">
+					<label for="query12" class="text-info font-weight-bold">OnlineBackup :</label>
+					<select id="query12" name="query12">
+						<option value="No">No</option>
+						<option value="Yes">Yes</option>
+						<option value="No internet service">No internet service</option>
+					</select>
+					<!--textarea class="form-control" rows="2" id="query12" name="query12" rows="2" cols="5" autofocus>{{query12}}</textarea-->
+				</div>
+				<div class="form-group  purple-border">
+					<label for="query13" class="text-info font-weight-bold">DeviceProtection:</label>
+					<select id="query13" name="query13">
+						<option value="No">No</option>
+						<option value="Yes">Yes</option>
+						<option value="No internet service">No internet service</option>
+					</select>
+					<!--textarea class="form-control" rows="2" id="query13" name="query13" rows="2" cols="5" autofocus>{{query13}}</textarea-->
+				</div>
+				<div class="form-group  purple-border">
+					<label for="query14" class="text-info font-weight-bold">TechSupport:</label>
+					<select id="query14" name="query14">
+						<option value="No">No</option>
+						<option value="Yes">Yes</option>
+						<option value="No internet service">No internet service</option>
+					</select>
+					<!--textarea class="form-control" rows="2" id="query14" name="query14" rows="2" cols="5" autofocus>{{query14}}</textarea-->
+				</div>
+				<div class="form-group  purple-border">
+					<label for="query15" class="text-info font-weight-bold">StreamingTV:</label>
+					<select id="query15" name="query15">
+						<option value="No">No</option>
+						<option value="Yes">Yes</option>
+						<option value="No internet service">No internet service</option>
+					</select>
+					<!--textarea class="form-control" rows="2" id="query15" name="query15" rows="2" cols="5" autofocus>{{query15}}</textarea-->
+				</div>
+				<div class="form-group  purple-border">
+					<label for="query16" class="text-info font-weight-bold">StreamingMovies:</label>
+					<select id=" query16" name="query16">
+						<option value="No">No</option>
+						<option value="Yes">Yes</option>
+						<option value="No internet service">No internet service</option>
+					</select>
+					<!--textarea class="form-control" rows="2" id="query16" name="query16" rows="2" cols="5" autofocus>{{query16}}</textarea-->
+				</div>
+				<div class="form-group  purple-border">
+					<label for="query17" class="text-info font-weight-bold">Contract:</label>
+					<select id=" query17" name="query17">
+						<option value="Month-to-month">Month-to-month</option>
+						<option value="One year">One year</option>
+						<option value="Two year">Two year</option>
+					</select>
+					<!--textarea class="form-control" rows="2" id="query17" name="query17" rows="2" cols="5" autofocus>{{query17}}</textarea-->
+				</div>
+				<div class="form-group  purple-border">
+					<label for="query18" class="text-info font-weight-bold">PaperlessBilling:</label>
+					<select id=" query18" name="query18">
+						<option value="Yes">Yes</option>
+						<option value="No">No</option>
+					</select>
+					<!--textarea class="form-control" rows="2" id="query18" name="query18" rows="2" cols="5" autofocus>{{query18}}</textarea-->
+				</div>
+				<div class="form-group  purple-border">
+					<label for="query19" class="text-info font-weight-bold">PaymentMethod:</label>
+					<select id="query19" name="query19">
+						<option value="Electronic check">Electronic check</option>
+						<option value="Mailed check">Mailed check</option>
+						<option value="Bank transfer (automatic)">Bank transfer (automatic)</option>
+						<option value="Credit card (automatic)">Credit card (automatic)</option>
+					</select>
+					<!--textarea class="form-control" rows="2" id="query19" name="query19" rows="2" cols="5" autofocus>{{query19}}</textarea-->
+				</div>
+
+			</div>
+			<div class="col-sm-3">
+				<button type="submit" class="btn btn-success" name="submit">SUBMIT</button>
+			</div>
+		</form>
+	</div>
+
+	<div class="row">
+		<div class ="col-sm-9">
+			<textarea class="form-control" rows="2" id="output1" name="output1" rows="2" cols="5"
+				autofocus>{{output1}}</textarea>
+			<textarea class="form-control" rows="2" id="output2" name="output2" rows="2" cols="5"
+				autofocus>{{output2}}</textarea>
+		</div>
+	</div>
+	</div>
+</body>
+</html>
