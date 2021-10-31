@@ -1,1 +1,1 @@
-web: gunicorn churnmodelprediction.wsgi --log-file -
+web: gunicorn app:app
