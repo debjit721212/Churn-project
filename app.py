@@ -1,6 +1,5 @@
 from flask import Flask, request, render_template
 import pickle
-import os 
 import pandas as pd
 import numpy as np
 from sklearn.model_selection import train_test_split
@@ -129,5 +128,5 @@ def predict():
                            query18 = request.form['query18'], 
                            query19 = request.form['query19'])
 
-port = int(os.environ.get("PORT", 5000))
-app.run(host='0.0.0.0', port=port)
+#port = int(os.environ.get("PORT", 5000))
+app.run()
