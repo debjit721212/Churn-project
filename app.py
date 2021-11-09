@@ -129,4 +129,4 @@ def predict():
                            query19 = request.form['query19'])
 
 #port = int(os.environ.get("PORT", 5000))
-app.run()
+app.run(threaded=True, port=5000)
